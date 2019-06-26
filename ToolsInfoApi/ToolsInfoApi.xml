@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ToolsInfoApi</name>
+    </assembly>
+    <members>
+        <member name="M:ToolsInfoApi.Controllers.BooksController.Get">
+             <summary>
+             Get BooksList
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /Todo
+                 {
+                    "id": 1,
+                    "name": "Item1",
+                    "isComplete": true
+                 }
+            
+             </remarks>
+             <returns></returns>
+        </member>
+        <member name="M:ToolsInfoApi.Controllers.BooksController.Create(ToolsInfoApi.Models.Book)">
+            <summary>
+            添加一本新书
+            </summary>
+            <param name="book">Book model</param>
+            <returns>Bool 值</returns>
+        </member>
+    </members>
+</doc>
