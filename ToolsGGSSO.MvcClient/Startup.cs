@@ -61,14 +61,16 @@ namespace ToolsGGSSO.MvcClient
 
                     //是否将Tokens保存到AuthenticationProperties中,最终到浏览器cookie中
                     options.SaveTokens = true;
+                    //是否从UserInfoEndpoint获取Claims
+                    options.GetClaimsFromUserInfoEndpoint = true;
+
                     options.Scope.Clear();
 
                     options.Scope.Add("email");
                     options.Scope.Add("roles");
                     options.Scope.Add("openid");
                     options.Scope.Add("profile");
-                    //是否从UserInfoEndpoint获取Claims
-                    options.GetClaimsFromUserInfoEndpoint = true;
+
 
                     options.ClaimActions.DeleteClaim("email");
 

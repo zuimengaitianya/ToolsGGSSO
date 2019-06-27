@@ -45,14 +45,14 @@ namespace ToolsInfoGGSSO
                      .AddResourceOwnerValidator<ResourceOwnerPasswordValidator>()
                      //.AddProfileService<ProfileService>()
                      ;
-            services.AddAuthentication("Bearer")
-                .AddCookie("Cookies")
-                .AddJwtBearer("Bearer", options =>
-                {
-                    options.Authority = "http://localhost:5000";
-                    options.RequireHttpsMetadata = false;
-                    options.Audience = "api1";
-                });
+            //services.AddAuthentication("Bearer")
+            //    .AddCookie("Cookies")
+            //    .AddJwtBearer("Bearer", options =>
+            //    {
+            //        options.Authority = "http://localhost:5000";
+            //        options.RequireHttpsMetadata = false;
+            //        options.Audience = "api1";
+            //    });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             

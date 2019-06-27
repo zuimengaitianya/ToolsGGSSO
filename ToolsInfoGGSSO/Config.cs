@@ -23,7 +23,7 @@ namespace ToolsInfoGGSSO
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
-                //new IdentityResources.Email(),
+                new IdentityResources.Email(),
                 new IdentityResource("roles","roles",new List<string>{ "role"})
             };
         }
@@ -112,7 +112,7 @@ namespace ToolsInfoGGSSO
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        //IdentityServerConstants.StandardScopes.Email,
+                        IdentityServerConstants.StandardScopes.Email,
                         "roles",
                         "api1"
                     },
@@ -154,8 +154,8 @@ namespace ToolsInfoGGSSO
                     Password="123456",
                     Claims=new Claim[]
                             {
-                                //new Claim("UserId",1.ToString()),
-                                //new Claim(JwtClaimTypes.Name,"alice"),
+                                new Claim("UserId",1.ToString()),
+                                new Claim(JwtClaimTypes.Name,"alice"),
                                 new Claim(JwtClaimTypes.GivenName,"alice"),
                                 new Claim(JwtClaimTypes.FamilyName,"globetools"),
                                 new Claim(JwtClaimTypes.Email,"565009871@qq.com"),
@@ -169,8 +169,8 @@ namespace ToolsInfoGGSSO
                     Password="123456",
                     Claims=new Claim[]
                             {
-                                //new Claim("UserId",1.ToString()),
-                                //new Claim(JwtClaimTypes.Name,"anlong"),
+                                new Claim("UserId",1.ToString()),
+                                new Claim(JwtClaimTypes.Name,"anlong"),
                                 new Claim(JwtClaimTypes.GivenName,"alone"),
                                 new Claim(JwtClaimTypes.FamilyName,"globetools"),
                                 new Claim(JwtClaimTypes.Email,"565009871@qq.com"),
