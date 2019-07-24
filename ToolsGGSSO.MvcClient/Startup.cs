@@ -82,6 +82,7 @@ namespace ToolsGGSSO.MvcClient
                     //收集Claims
                     options.ClaimActions.MapJsonKey("website", "website");
                     options.ClaimActions.MapUniqueJsonKey("role", "role");
+                    options.ClaimActions.MapUniqueJsonKey("email", "email");
                     options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
                     {
                         NameClaimType = JwtClaimTypes.GivenName,

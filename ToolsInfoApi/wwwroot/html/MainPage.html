@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Angular test project</title>
+    <script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
+    <style>
+        input.ng-invalid {
+            background-color:lightblue;
+        }
+        /*input.ng-error {
+            background-color:red;
+        }*/
+    </style>
+</head>
+<body>
+    <!--<div data-ng-app="" name="myDiv" data-ng-init="name='Alone';quantity=3;cost=5;person={firstName:'John',lastName:'Doe'};point=[1,15,18,3,25]">
+        <p>名字：<input type="text" data-ng-model="name" /></p>
+        <h1>Hello {{name}}</h1>
+        <h2>Hello <span data-ng-bind="name"></span> </h2>
+        <p>表达式：{{5+5}}</p>
+        <p>总价：{{quantity*cost}}</p>
+        <p>姓名为：{{person.firstName+" "+person.lastName}}</p>
+        <p>第三个值为：{{point[3]}}</p>
+        <ul>
+            <li ng-repeat="x in point">{{x}}</li>
+        </ul>
+        <form name="myForm" ng-init="myTest='test@qq.com'">
+            Email:
+            <input type="email" name="myAddress" ng-model="myText" />
+            <span ng-show="myForm.myAddress.$error.email">不是一个合法的邮箱</span>
+            <h1>状态</h1>
+            {{myForm.myAddress.$valid}}
+            {{myForm.myAddress.$dirty}}
+            {{myForm.myAddress.$touched}}<br />
+            <input name="myName" ng-model="text" required />
+        </form>
+        
+    </div>-->
+    <div data-ng-app="myApp" data-ng-controller="myCtrl">
+        名：<input type="text" ng-model="firstName" /><br />
+        姓:<input type="text" ng-model="lastName" /><br />
+        姓名：{{firstName+" "+lastName}}
+        <h1>{{greeting}}</h1>
+        <button ng-click="sayHello()">click me</button>
+    </div>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.firstName = 'zhong';
+            $scope.lastName = 'anlong';
+            $scope.sayHello = function () {
+                $scope.greeting = 'Hello ' + $scope.lastName + '!';
+            }
+        });
+    </script>
+</body>
+</html>

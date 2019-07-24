@@ -23,6 +23,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolsGG.XUnitTest", "ToolsG
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolsWebClient", "ToolsWebClient\ToolsWebClient.csproj", "{2A739427-51F2-429F-82CD-875BCD8AA7BF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolsGG.MGR", "ToolsGG.MGR\ToolsGG.MGR.csproj", "{6485EC4E-B264-4B9F-B7F4-95FB2BC258A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolsGG.Cat", "ToolsGG.Cat\ToolsGG.Cat.csproj", "{FF4F5B89-E963-4BB3-B469-8244C68C6790}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{2A739427-51F2-429F-82CD-875BCD8AA7BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A739427-51F2-429F-82CD-875BCD8AA7BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A739427-51F2-429F-82CD-875BCD8AA7BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6485EC4E-B264-4B9F-B7F4-95FB2BC258A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6485EC4E-B264-4B9F-B7F4-95FB2BC258A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6485EC4E-B264-4B9F-B7F4-95FB2BC258A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6485EC4E-B264-4B9F-B7F4-95FB2BC258A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF4F5B89-E963-4BB3-B469-8244C68C6790}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF4F5B89-E963-4BB3-B469-8244C68C6790}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF4F5B89-E963-4BB3-B469-8244C68C6790}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF4F5B89-E963-4BB3-B469-8244C68C6790}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

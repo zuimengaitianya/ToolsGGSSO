@@ -28,7 +28,10 @@ namespace ToolsInfoGGSSO
         public void ConfigureServices(IServiceCollection services)
         {
             // Adds IdentityServer
-            var builder = services.AddIdentityServer(option=>option.IssuerUri= Configuration["IssuerUri:DefaultUri"])
+            var builder = services.AddIdentityServer(option=> {
+                option.IssuerUri = Configuration["IssuerUri:DefaultUri"];
+                option.Authentication.CookieAuthenticationScheme = "Cookies";
+            })
                      /*
                       * AddDeveloperSigningCredential
                       * 
@@ -45,19 +48,16 @@ namespace ToolsInfoGGSSO
                      .AddResourceOwnerValidator<ResourceOwnerPasswordValidator>()
                      //.AddProfileService<ProfileService>()
                      ;
-            //services.AddAuthentication("Bearer")
-            //    .AddCookie("Cookies")
-            //    .AddJwtBearer("Bearer", options =>
-            //    {
-            //        options.Authority = "http://localhost:5000";
-            //        options.RequireHttpsMetadata = false;
-            //        options.Audience = "api1";
-            //    });
+            services.AddAuthentication("Bearer")
+                .AddCookie("Cookies")
+                .AddJwtBearer("Bearer", options =>
+                {
+                    options.Authority = "http://localhost:5000";
+                    options.RequireHttpsMetadata = false;
+                    options.Audience = "api1";
+                });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            
-            
-            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
